@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+
+</head>
+<body>
+  <div class="make-center main-container">
+    <div class="border padding">
+      <header>
+        <h2>Personal Details Form</h2>
+      </header>
+      <input type="text"  onchange="validateName(this)" placeholder="Enter full name" id="fullName"/><br/><br/>
+      <input type="email" onchange="validateEmail(this)" placeholder="Enter email" id="email"/><br/><br/>
+      <input type="tel" onfocus="this.oldValue = this.value" onkeydown="validateNumber(this,event); this.oldValue = this.value" placeholder="Enter phone number" id="phoneNumber">
+      &nbsp;&nbsp;&nbsp;&nbsp;<span id="provider"></span>&nbsp;&nbsp;<span id="state"></span><br/><br/><br/>
+      <div class="make-center">
+        <button type="submit" disabled="true" onclick="submit()" id="submitBtn">Submit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
